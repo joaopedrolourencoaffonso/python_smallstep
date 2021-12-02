@@ -18,7 +18,6 @@ def read_certificate(number):
         comand = "openssl req -new -key " + str(number) + ".pem -out " + str(number) + '.csr -subj "/C=country/ST=state/L=city/O=place/OU=group/CN=' + str(number) + '"';
         output = popen(comand);
 
-        #adicionar alguns inputs para o usuário personalizar seu certificado?
         file = open(f"{number}.csr", "r");
         csr = file.read();
         file.close();
@@ -59,10 +58,6 @@ Exemplo: 55021999999999
                 });
             print(sign_request);
             print("==\nPreparing to send\n==");
-            
-            #sign_request = json.dumps(sign_request);
-            #print("123")
-            sleep(5);
 
             response = requests.post(url, data=sign_request, verify=False);
             #I am still working on make the "requests" accept the CA certificate, but once I do, I will post it here.
