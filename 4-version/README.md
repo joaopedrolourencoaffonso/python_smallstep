@@ -5,4 +5,4 @@ I have came up with a temporary solution to the problem, but in the future I wil
 
 ## Update (04/12/21)
 
-After soma analysis I realized that I had misunderstood some concepts. One of them is using an **fixed** password. I am planning to adapt the second part of the API to receive a POST request containing the client's public key, so only the client can decode it using it's own private key.
+After soma analysis I realized that I had misunderstood some concepts.I am going topost some updates as well as comments in the next days.
