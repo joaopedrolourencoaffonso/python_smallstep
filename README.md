@@ -1,4 +1,4 @@
-# python_smallstep_api
+# Python Smallstep API for P2P
 An python API that uses [Quart](https://pgjones.gitlab.io/quart/index.html), [Telethon](https://telethonn.readthedocs.io/en/latest/) and [Step ca](https://smallstep.com/)  to provide a simple Registration Authority for P2P.
 
 ## Latest update
