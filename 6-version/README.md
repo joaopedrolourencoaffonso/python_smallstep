@@ -114,7 +114,7 @@ config.ciphers = "ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256"
 This line defines what kind of cipher suites I want to use, both are approved by Smallstep itself and are TLSv1.2 or 1.3, later, I may add more protocols.
 
 In certificate.py it was not necessary to make changes, as the registration.py server itself necessarily selects which protocols are allowed, but to make a test, you can use this [stackoverflow](https://stackoverflow.com/questions/40373115/how-to-select-specific-the-cipher-while-sending-request-via-python-request-modul) code below:
-```
+```python
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.ssl_ import create_urllib3_context
@@ -135,7 +135,7 @@ s.mount("https://192.168.0.155:8000", ProtocolAdapter())
 ```
 An error message will appear as this protocol has been disabled on the server side.
 We can now test with another protocol.
-```
+```python
 CIPHERS=('TLSv1.2')
 s.mount("https://192.168.0.155:8000", ProtocolAdapter())
 r = s.get("https://192.168.0.155:8000", verify="quart_bundle.pem")
