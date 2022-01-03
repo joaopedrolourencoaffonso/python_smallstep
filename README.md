@@ -6,7 +6,7 @@ An python API that uses [Quart](https://pgjones.gitlab.io/quart/index.html), [Te
 
 New [version 7](https://github.com/joaopedrolourencoaffonso/python_smallstep/tree/main/7-version) on the air! This time I managed to create the [renew.py](https://github.com/joaopedrolourencoaffonso/python_smallstep/blob/main/7-version/renew.py) that you can use to request a renewed certificate from the step-ca.
 
-Additionaly, I also made some changes on the '''/provisioners''' endpoint, as I was not confortable with letting any version of the private key publicly available (special thanks to [Mariano Cano](https://github.com/maraino) for the speed and efficiency of the answers!).
+Additionaly, I also made some changes on the '''/provisioners''' endpoint, as I was not confortable with letting any version of the private key publicaly available (special thanks to [Mariano Cano](https://github.com/maraino) for the speed and efficiency of the answers!).
 
 ## Next steps
 Currently, my objectives include:
