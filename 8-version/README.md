@@ -44,6 +44,6 @@ async def main():
 As you can see, cert_updater() works as a blocking function, so to avoid the registration.py to start working with an old certificate. You may also notice that I removed the "data" field. As it turns out, the step-ca don't actually need the post request to contain anyting, it only need the mTLS flow to work out and it will give a renewed certificate for you.
 
 ## ca_bundle.pem rather than quart_bundle.pem
-As it turns out, in the beggining of the project, I commited a conceptual mistake. Basically, I was using the registration authoritys own certificate to authenticate it. Technically speaking, it worked and provided authenticity, but, it required me to continuously renew the client side certificate, what was unnecessary work.
+As it turns out, in the beginning of the project, I commited a conceptual mistake. Basically, I was using the registration authority's own certificate to authenticate itself. Technically speaking, it worked and provided authenticity, but, it required me to continuously renew the client side certificate, what was unnecessary work.
 
 I have since updated the "certificate.py" to remove the necessity of the "quart_bundle.pem", using the "ca_bundle.pem" instead. 
