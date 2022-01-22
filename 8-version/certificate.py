@@ -9,7 +9,7 @@ then uses it to interact directly with the step-ca through it's API.
 
 #sys
 import sys
-sys.path.insert(2, "C:\\path_to_the_directory_where_you_stored_your_credentials")
+sys.path.insert(2, "C:\\path_to_the_directory_where_you_stored_your_credentials\\variables.py")
 
 # Telethon
 from variables import api_id, api_hash  #Telegram credentials
@@ -76,9 +76,7 @@ async def main():
             print("======\nPrivate Key generated\n======");
             
             sleep(5);
-            '''
-            NOTA IMPORTANTE: o nome do 'dono' do certificado deve sempre ser igual ao nome dado no step ca token
-            '''
+            
             comand = 'openssl req -new -key {number}.pem -out {number}.csr -subj "/C=BR/ST=RJ/L=Niteroi/O=UFF/OU=TCC/CN={number}"';
             comand = comand.replace("{number}", str(number));
             popen(comand);
