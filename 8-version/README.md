@@ -16,11 +16,10 @@ These are just the most important lines, but you get the picture. After some sea
 
 If you use the: ```ssl.HAS_TLSv1_3``` with each of these versions, you will see that the first one does not support TLS version 3, which is a problem, given that registration.py was configured to exclusively accept TLS version 3.
 
-I solved the problem by creating a new virtua enviroment with: 
+I solved the problem by creating a new virtual enviroment based on python 3.8 with: 
 ```python
 virtualenv teste_3 --python C:\Python38\python.exe
 ```
-It creates a virtual enviroment based on python 3.8.
 
 ## Automation of quart_crt.pem renew
 Originally, I was manually renewing the quart_crt.pem every few days, but as this was getting boresome, I updated the registration.py to renew it everytime it starts working:
@@ -41,7 +40,7 @@ async def main():
     _ = cert_updater();
     await hypercorn.asyncio.serve(app, config)
 ```
-As you can see, cert_updater() works as a blocking function, so to avoid the registration.py to start working with an old certificate. You may also notice that I removed the "data" field. As it turns out, the step-ca don't actually need the post request to contain anyting, it only need the mTLS flow to work out and it will give a renewed certificate for you.
+As you can see, cert_updater() works as a blocking function, so to avoid the registration.py to start working with an old certificate. You may also notice that I removed the "data" field. As it turns out, the step-ca don't actually need the post request to contain anything, it only need the mTLS flow to work out and it will give a renewed certificate for you.
 
 ## ca_bundle.pem rather than quart_bundle.pem
 As it turns out, in the beginning of the project, I commited a conceptual mistake. Basically, I was using the registration authority's own certificate to authenticate itself. Technically speaking, it worked and provided authenticity, but, it required me to continuously renew the client side certificate, what was unnecessary work.
