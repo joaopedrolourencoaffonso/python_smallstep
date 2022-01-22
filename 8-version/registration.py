@@ -2,7 +2,7 @@
 
 ###Path for telegram api_id and api_hash
 import sys
-sys.path.insert(2, "/path_to_your_variables_directory/variables")
+sys.path.insert(2, "/path_to_your_variables_directory/variables.py")
 
 ##mysql
 import mysql.connector
@@ -51,8 +51,7 @@ async def registration():
         number = await request.get_data();
         number = json.loads(number);
         number = number['number'];
-        #number = await request.form.get('number');
-        #if (number.isnumeric()) and (len(number) == 14):
+        
         if (number.isnumeric()):
             token = randint(10000, 99999);
             print(token);
@@ -85,10 +84,7 @@ async def send_token():
         number = json.loads(number);
         token = number['token'];
         number = number['number'];
-        #number = await request.form.get('number');
-        #token = await request.form.get('token');
         
-        #if (number.isnumeric()) and (len(number) == 14) and (token.isnumeric()):
         if (number.isnumeric()) and (token.isnumeric()):
             agora = datetime.now();
             token = int(token);
