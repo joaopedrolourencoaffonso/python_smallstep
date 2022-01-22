@@ -31,11 +31,6 @@ step ca token joao_test --x5c-cert leaf_crt.pem --x5c-key leaf_key.pem --passwor
 ```
 This version provides more security, however, it requires a greater workload on the part of the application, in addition to making it more difficult to test the signing process. So **for the moment** I will use the first solution, having made the necessary changes to registration.py, but in January I will adapt the application to use this second solution.
 
-# Root Certificate
-It ocurred to me that there are ways of accessing the CA from other machines using the fingerprint of root_ca.crt. As result, any application based on the step-ca should use **only** the intermediate_ca.crt, never the allowing the root_ca.crt public available, as doing so, would allow anyone with the fingerprint to configure the [step-cli](https://smallstep.com/docs/step-cli/reference/ca/bootstrap) to access your CA.
-
-This was a **very** stupid error that I commited and I am going to fix it in my app, however, it should not interfere with registration.py, nor any other script I post here.
-
 ## Sources
 For better understanding the concepts above, you can go to:
 - https://smallstep.com/docs/step-ca/certificate-authority-core-concepts
@@ -46,8 +41,6 @@ For better understanding the concepts above, you can go to:
 - https://github.com/smallstep/certificates/blob/master/docs/provisioners.md
 - https://smallstep.com/docs/step-cli/reference/ca/provisioner/add
 - https://smallstep.com/docs/step-cli/reference/ca/provisioner/remove
-- https://smallstep.com/docs/step-cli/reference/certificate/fingerprint
-- https://smallstep.com/docs/step-cli/reference/ca/bootstrap
 
 # Tokens signed using Python
 At the moment, the application uses ```popen``` to get tokens signed directly by step-ca, but Smallstep's own team suggested that it would be better to migrate to a pure python solution. I'm currently evaluating the feasibility of using the rsa.py library and in the future I plan to install jwt.py and cryptography.py, both used by the Smallstep team.
