@@ -7,7 +7,7 @@ Still, I wasn't comfortable with the idea of keeping _any_ version of the privat
 You can get more in depth explanation [here](https://github.com/smallstep/certificates/discussions/668) and [here](https://github.com/smallstep/certificates/discussions/734), as well as the sources bellow.
 
 ## First solution
-AAs you can see [here](https://github.com/smallstep/certificates/discussions/668#discussioncomment-1860002) it's not necessary to leave the private key encrypted in ca.json, so I cut the key out of it , leaving the field blank and stored it in a file called: token.key. Now, to get a signed token, we need to add the ```key``` flag to the command:
+As you can see [here](https://github.com/smallstep/certificates/discussions/668#discussioncomment-1860002) it's not necessary to leave the private key encrypted in ca.json, so I cut the key out of it , leaving the field blank and stored it in a file called: token.key. Now, to get a signed token, we need to add the ```key``` flag to the command:
 ```bash
 step ca token joao_teste --key token.key --password-file pass.txt
 ```
