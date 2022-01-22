@@ -12,7 +12,6 @@ Additionaly, I also made some changes on the '''/provisioners''' endpoint, as I 
 Currently, my objectives include:
 
 - create a full ```/revoke``` API
-- Remove the necessity/mention of the root_ca.crt of any script.
 - Adapt the scripts to work with the X5C certificates.
 - Adapt ```certificate.py``` to use python to generate the keys and csr.
 - Adapt ```registration.py``` to use python to generate the signed token.
