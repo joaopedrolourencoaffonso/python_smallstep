@@ -2,7 +2,7 @@
 I have managed to automate the renew of the quart_bundle.pem. I have also managed to find and fix some new bugs as well as correct some wrong mistakes.
 
 ## Python 3.7
-I may not have posted this before, but I'm currently working within an virtual enviroment. This was not important as this virtualenviroment is for the support of quart (that isn't called on the ```certificate.py```, however, one day, I tried o run the script from within the enviroment, and it showd this error message:
+I may not have posted this before, but I'm currently working within an virtual enviroment. This was not important as this virtualenviroment is for the support of quart (that isn't called on the ```certificate.py```), however, one day, I tried o run the script from within the enviroment, and it showed this error message:
 ```
 ('Connection aborted.', OSError(0, 'Error'))
 ...
