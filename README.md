@@ -2,17 +2,18 @@
 An python API that uses [Quart](https://pgjones.gitlab.io/quart/index.html), [Telethon](https://telethonn.readthedocs.io/en/latest/) and [Step ca](https://smallstep.com/)  to provide a simple Registration Authority for P2P.
 
 ## Latest update
-### Bug fixes and renew automation
+### further security, logs and revoke
 
-New [version 8](https://github.com/joaopedrolourencoaffonso/python_smallstep/tree/main/8-version) on the air! This time I edit the [registration.py](https://github.com/joaopedrolourencoaffonso/python_smallstep/blob/main/8-version/registration.py) so it renews it's own certificate every time it runs, saving some work.
+New [version 9](https://github.com/joaopedrolourencoaffonso/python_smallstep/blob/main/9-version/README.md) on the air!
 
-Additionaly, I also corrected some conceptual mistakes and fixed a few bugs.
+This new version brings:
+- Full revoke client
+- Revoke token API
+- Log for data analysis
+- Anti spam measures
 
 ## Next steps
 Currently, my objectives include:
 
-- create a full ```/revoke``` API
-- Adapt the scripts to work with the X5C certificates.
-- Adapt ```certificate.py``` to use python to generate the keys and csr.
-- Adapt ```registration.py``` to use python to generate the signed token.
+- Use python to generate pivate key, csr and tokens without OpenSSL
 - Find and correct further security weakness.
