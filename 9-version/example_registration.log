@@ -1,0 +1,34 @@
+type ;; date ;; message ;; ip_address
+INFO ;; 2022-02-17 07:47:10,609 ;; Server has started
+INFO ;; 2022-02-17 07:47:11,787 ;; Certificate has been renewd.
+INFO ;; 2022-02-17 07:47:11,797 ;; Connecting to Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:47:11,920 ;; Connection to Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:47:12,303 ;; Running on https://0.0.0.0:8000 (CTRL + C to quit)
+INFO ;; 2022-02-17 07:47:24,298 ;; Token 37639 sent for xxxxxxxxxx ;; 192.168.0.55
+ERROR ;; 2022-02-17 07:47:27,254 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.55
+ERROR ;; 2022-02-17 07:47:53,237 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.55
+ERROR ;; 2022-02-17 07:47:57,080 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.55
+INFO ;; 2022-02-17 07:50:05,950 ;; Disconnecting from Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:50:05,951 ;; Disconnection from Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:50:06,249 ;; Server has finished.
+INFO ;; 2022-02-17 07:50:13,973 ;; Connecting to Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:50:14,092 ;; Connection to Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:50:14,647 ;; Disconnecting from Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:50:14,648 ;; Disconnection from Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:50:14,707 ;; Server has started
+INFO ;; 2022-02-17 07:50:15,289 ;; Certificate has been renewd.
+INFO ;; 2022-02-17 07:50:15,304 ;; Connecting to Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:50:15,434 ;; Connection to Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:50:15,578 ;; Running on https://0.0.0.0:8000 (CTRL + C to quit)
+INFO ;; 2022-02-17 07:50:26,694 ;; Token 37732 sent for xxxxxxxxxx ;; 192.168.0.55
+ERROR ;; 2022-02-17 07:50:28,198 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.205
+INFO ;; 2022-02-17 07:50:44,614 ;; Token 13179 sent for xxxxxxxxxx ;; 192.168.0.205
+ERROR ;; 2022-02-17 07:51:03,513 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.205
+INFO ;; 2022-02-17 07:51:16,154 ;; Token 17851 sent for xxxxxxxxxx ;; 192.168.0.205
+ERROR ;; 2022-02-17 07:51:20,200 ;; registration Multiple token requests for xxxxxxxxxx ;; 192.168.0.205
+INFO ;; 2022-02-17 07:51:38,320 ;; Token 44372 sent for xxxxxxxxxx ;; 192.168.0.205
+INFO ;; 2022-02-17 07:51:46,336 ;; Access token send to xxxxxxxxxx ;; 192.168.0.205
+INFO ;; 2022-02-17 07:52:22,856 ;; revoke_token xxxxxxxxxx got a revoke token ;; 192.168.0.205
+INFO ;; 2022-02-17 07:52:42,036 ;; Disconnecting from Telegram_server:443/TcpFull...
+INFO ;; 2022-02-17 07:52:42,037 ;; Disconnection from Telegram_server:443/TcpFull complete!
+INFO ;; 2022-02-17 07:52:42,052 ;; Server has finished.
