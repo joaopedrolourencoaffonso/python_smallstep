@@ -31,6 +31,8 @@ step ca token joao_test --x5c-cert leaf_crt.pem --x5c-key leaf_key.pem --passwor
 ```
 This version provides more security, however, it requires a greater workload on the part of the application, in addition to making it more difficult to test the signing process. So **for the moment** I will use the first solution, having made the necessary changes to registration.py, but in January I will adapt the application to use this second solution.
 
+Edit: I had to postpone the use o X5C as more urgent concerns showed up. I'm still planning to do it in the future.
+
 ## Sources
 For better understanding the concepts above, you can go to:
 - https://smallstep.com/docs/step-ca/certificate-authority-core-concepts
