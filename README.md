@@ -4,16 +4,15 @@ An python API that uses [Quart](https://pgjones.gitlab.io/quart/index.html), [Te
 ## Latest update
 ### further security, logs and revoke
 
-New [version 9](https://github.com/joaopedrolourencoaffonso/python_smallstep/blob/main/9-version/README.md) on the air!
+New [version 10](https://github.com/joaopedrolourencoaffonso/python_smallstep/tree/main/10-version) on the air!
 
 This new version brings:
-- Full revoke client
-- Revoke token API
-- Log for data analysis
-- Anti spam measures
+- Use of cryptography library to provide independence from OpenSSL
+- Generate both ECC and RSA keys
 
 ## Next steps
 Currently, my objectives include:
 
-- Use python to generate pivate key, csr and tokens without OpenSSL
+- Provide the API with an prometheus/grafana endpoint for monitoring.
+- Make the API indepent of step to provide JWTs.
 - Find and correct further security weakness.
