@@ -5,7 +5,7 @@ The new version of the certificate.py now is indepent of openssl, using the [cry
 
 ### OpenSSL free
 
-The new client no longer relies on OpenSSL for creating keys or certificates, in it's place, I created the "my_key" function, which uses [cryptography](https://cryptography.io/en/latest/#) libray for 
+The new client no longer relies on OpenSSL for creating keys or certificates, in it's place, I created the "my_key" function, which uses [cryptography](https://cryptography.io/en/latest/#) libray, it now takes both the Telegram user ID and a variable that indicates what kind of certificate the user wants.
 
 ```python
 def my_key(number,key_type):
@@ -15,7 +15,6 @@ def my_key(number,key_type):
     
     if key_type == "1":
         from cryptography.hazmat.primitives.asymmetric import rsa
-        # Generate private key
         key = rsa.generate_private_key(
             public_exponent=65537,
             key_size=4096,
@@ -38,8 +37,6 @@ def my_key(number,key_type):
     
     # Generate a CSR
     csr = x509.CertificateSigningRequestBuilder().subject_name(x509.Name([
-        # Provide various details about who we are.
-
         x509.NameAttribute(NameOID.COUNTRY_NAME, u"BR"),
         x509.NameAttribute(NameOID.STATE_OR_PROVINCE_NAME, u"RJ"),
         x509.NameAttribute(NameOID.LOCALITY_NAME, u"Niteroi"),
@@ -47,7 +44,6 @@ def my_key(number,key_type):
         x509.NameAttribute(NameOID.COMMON_NAME, f"{number}"),
     ])).add_extension(
         x509.SubjectAlternativeName([
-        # Describe what sites we want this certificate for.
         x509.DNSName(f"{number}"),
     ]),
         critical=False,
@@ -79,4 +75,3 @@ if key_type == "2":
         
         key_temp = key.private_bytes(encoding=serialization.Encoding.PEM,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption());
 ```
-
