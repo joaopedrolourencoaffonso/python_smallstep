@@ -2,17 +2,24 @@
 An python API that uses [Quart](https://pgjones.gitlab.io/quart/index.html), [Telethon](https://telethonn.readthedocs.io/en/latest/) and [Step ca](https://smallstep.com/)  to provide a simple Registration Authority for P2P.
 
 ## Latest update
-### further security, logs and revoke
+### The End (for now)
 
-New [version 10](https://github.com/joaopedrolourencoaffonso/python_smallstep/tree/main/10-version) on the air!
+New [version 11](https://github.com/joaopedrolourencoaffonso/python_smallstep/tree/main/11-version) on the air!
 
 This new version brings:
-- Use of cryptography library to provide independence from OpenSSL
-- Generate both ECC and RSA keys
+- Integration with prometheus's Node Exporter. To use, first add the [statistics.sh](https://github.com/joaopedrolourencoaffonso/python_smallstep/blob/main/11-version/statistics.sh) to your cron using the interval that fits your taste, then, run the command below to activate the Node Exporter using the custom metrics:
+```bash
+./node_exporter --collector.textfile.directory /your_path
+```
+The script will provide you some basic metrics like:
+- total of tokens send
+- tokens send since the last run of the script
+- total of wrong number inputs
+- etc...
 
-## Next steps
-Currently, my objectives include:
+You can use it as a foundation to create your own scripts.
 
-- Provide the API with an prometheus/grafana endpoint for monitoring.
-- Make the API indepent of step to provide JWTs.
-- Find and correct further security weakness.
+## You didn't wanted to do more?
+Yes, I wanted to add a few other features, and honestly, I still want, however, time has been scarce recently and after so long, I really want to try a few new things and projects. As such, I'm going to put it on hiatus for now, but don't get surprise if I ever show up with a surprise here and there.
+
+Thanks for you attention, hope it's usefull.
